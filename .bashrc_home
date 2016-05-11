@@ -1,0 +1,2 @@
+alias irssi='$HOME/projects/irssi/start.sh'
+eval $(docker-machine env default)

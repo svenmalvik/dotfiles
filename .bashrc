@@ -1,7 +1,7 @@
 alias ll='ls -latr'
-alias irssi='$HOME/projects/irssi/start.sh'
-alias aws='ssh -i ~/.ssh/aws/*.pem $AWS_USER@devops.town'
-alias git_bash="git pull; git add .bashrc; git commit -m \"bashrc\"; git push"
+alias _aws='ssh -i ~/.ssh/aws/*.pem $AWS_USER@devops.town'
+alias _gpcp="git pull; git commit -m \"I have no comment.\"; git push"
 
+#source .bashrc_home
+source .bashrc_hb
 tmux
-eval $(docker-machine env default)
