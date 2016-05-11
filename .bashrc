@@ -10,6 +10,13 @@ __git_ps1 ()
     fi
 }
 
+Time24h="\t"
+Time24a="\A"
+PathShort="\w"
+PathFull="\W"
+NewLine="\n"
+Jobs="\j"
+
 IBlack="\[\033[0;90m\]"       # Black
 Green="\[\033[0;32m\]"        # Green
 IRed="\[\033[0;91m\]"         # Red
