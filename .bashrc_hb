@@ -1,0 +1,30 @@
+alias _tr="docker -H docker-registry01:2375"
+alias _tm="docker -H doc-test-master:2375"
+alias _t1="docker -H doc-test-node01:2375"
+alias _t2="docker -H doc-test-node02:2375"
+alias _t3="docker -H doc-test-node03:2375"
+alias _t4="docker -H doc-test-node04:2375"
+alias _t="docker -H doc-test-master:2376"
+alias _tmssh="ssh doc-test-master"
+alias _t1ssh="ssh doc-test-node01"
+alias _t2ssh="ssh doc-test-node02"
+alias _t3ssh="ssh doc-test-node03"
+alias _t4ssh="ssh doc-test-node04"
+alias _dm="docker -H doc-dev-master:2375"
+alias _d1="docker -H doc-dev-node01:2375"
+alias _d2="docker -H doc-dev-node02:2375"
+alias _d="docker -H doc-dev-master:2376"
+alias _dmssh="ssh doc-dev-master"
+alias _d1ssh="ssh doc-dev-node01"
+alias _d2ssh="ssh doc-dev-node02"
+alias _devops='ssh mgmt-devops01'
+
+alias _trepos="curl -k https://docker-registry01/v2/_catalog | python -m json.tool"
+function _trepo() {
+        curl -k https://docker-registry01/v2/$1/tags/list | python -m json.tool 
+        curl -k https://docker-registry01/v2/$1/tags/list | python -m json.tool | wc -l
+}
+
+export M2_HOME=/usr/local/apache-maven
+export M2=$M2_HOME/bin 
+export PATH=$M2:$PATH
